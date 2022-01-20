@@ -1,13 +1,17 @@
-### Начальные данные
+### Команды
 
 ```sh
 docker-compose up -d
 ```
 
-Чтобы  заполнить базу данных
+Выполнить миграции
+```sh
+docker-compose exec app php artisan migrate
+```
+
+Заполнить базу данных
 ```sh
 docker-compose exec app php artisan db:seed
 ```
 
-### Доступ к базе
-* Переименовать .env.example в .env
+
