@@ -8,3 +8,6 @@ docker-compose up -d
 ```sh
 docker-compose exec app php artisan db:seed
 ```
+
+### Доступ к базе
+* Переименовать .env.example в .env
