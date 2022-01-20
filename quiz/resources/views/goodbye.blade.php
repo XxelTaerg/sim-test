@@ -8,11 +8,15 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
+
     </head>
     <body >
-        <div class="block1"><h1>Добро пожаловать на тестирование!</h1>
-            <p>Хотите проверить свои знания? Вам необходимо пройти тест на отлично, удачи!</p>
-            <div class="button-block"><p><a class='button' href="{{ route('start') }}">let's begin</a></p></div>
+        <div class="block1">
+            <h2>Поздравляем!</h2>
+            <h2>Ваш итоговый результат:</h2>
+            <p><h1>{{ $result * 100 }} %</h1></p>
+            <p>Спасибо за участие в тестировании.</p>
+            <p><a class="button" href="{{ URL('/') }}">Пройти заново</a></p>
         </div>
     </body>
 </html>

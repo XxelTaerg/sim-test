@@ -1,0 +1,56 @@
+.block1 {
+    margin: 10% 25% 25% 25%;
+    text-align: center;
+    width: 50%;
+    background: #ccc;
+    padding: 5px;
+    padding-right: 20px;
+    border: solid 1px black;
+    float: left;
+}
+.input-blocks {
+    text-align: left;
+    display: inline-block;
+}
+.block3 {
+    margin: 0 25% 0 25%;
+    text-align: center;
+    width: 50%;
+    background: #F0E68C;
+    padding: 5px;
+    border: solid 1px black;
+    float: left;
+    position: relative;
+    top: 40px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+.button {
+    background-color: #4CAF50;
+    font-size: 16px;
+    vertical-align: center;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px black;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+.button-block {
+
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+
+

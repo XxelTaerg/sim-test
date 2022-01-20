@@ -28,6 +28,40 @@ services:
     networks:
       - quiz
 
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "9002:9002"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: secret2
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+    networks:
+      - quiz 
+      
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+    restart: always
+    ports:
+     - 8081:80
+    environment:
+      PMA_HOST: db
+    networks:
+     - quiz
+
 networks:
   quiz:
-    driver: bridge
+    driver: bridge    
+volumes:
+    dbdata:
+        driver: local    
+    

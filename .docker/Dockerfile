@@ -12,7 +12,7 @@ RUN set -xe; \
       git \
       libzip-dev zip unzip && \
       docker-php-ext-configure zip && \
-      docker-php-ext-install zip && \
+      docker-php-ext-install zip pdo_mysql mbstring pcntl && \
       php -m | grep -q 'zip'
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
